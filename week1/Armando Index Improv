@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Armando Rebaza Introduction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .intro {
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <h1>Hello, I'm Armando Rebaza</h1>
+    <p>I'm originally from Perú, and now I live in the USA with my family.  
+       I'm excited to connect and share more about myself!</p>
+  </div>
+
+  <div class="gallery">
+    <img src="image1.jpg" alt="Photo 1">
+    <img src="image2.jpg" alt="Photo 2">
+    <img src="image3.jpg" alt="Photo 3">
+    <img src="image4.jpg" alt="Photo 4">
+  </div>
+
+</body>
+</html>
