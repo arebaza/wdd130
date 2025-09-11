@@ -43,7 +43,7 @@ section {
     border: 1px solid rgba(0 0 0 / 10%);
     padding: 10px;
     background-color: #abe;
-    font-size: 0.9rem;
+    font-size: .9rem;
 }
 
 section p {
@@ -51,7 +51,7 @@ section p {
 }
 
 ul {
-    margin: 10px 20px 0;
+    margin: 20px;
 }   
 
 footer {
