@@ -1,0 +1,75 @@
+/* General Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #00457C;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 0.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  max-width: 840px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+main img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Aside Section */
+aside {
+  width: 20rem;
+  margin: 1rem auto;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph Reset */
+p {
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
