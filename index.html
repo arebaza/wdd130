@@ -1,38 +1,80 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Armando Rebaza's WDD130 home page showcasing web development skills, HTML, CSS, and BYU-Idaho coursework.">
-  <meta name="author" content="Armando Rebaza">
-  <title>Armando Rebaza | WDD 130</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD130 – Home Page</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <img src="images/byui-logo.png" alt="BYU-Idaho logo" width="100">
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="wwr/">Rafting Website</a></li>
-      </ul>
+  <header class="site-header">
+    <h1>Armando Rebaza</h1>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Armando Rebaza | WDD 130</h1>
-    <img src="images/profile.jpg" alt="Armando Rebaza working on a home project">
-    <p>Hello! I'm Armando Rebaza, a lifelong learner blending computer engineering and finance. This site showcases my journey through Web Fundamentals at BYU-Idaho.</p>
-  </main>
+  <div class="layout">
+    <main>
+      <section class="intro">
 
-  <aside>
-    <h2>Peru</h2>
-    <img src="images/peru.jpg" alt="Flag of Peru">
-    <p>Peru is a beautiful country in South America known for its rich culture, ancient history, and breathtaking landscapes. It’s home to Machu Picchu, the Andes mountains, and vibrant traditions that inspire hospitality and spiritual connection.</p>
-  </aside>
+        <img
+          class="profile"
+          src="images/profile.jpg"
+          alt="Foto de perfil de Armando"
+          width="200"
+          height="250"
+        />
+        <h2>¡Welcome!</h2>
+        <p>
+         Hi! I'm Armando Rebaza — finance wizard by day, soccer referee by weekend, and aspiring software developer by night.
+         I've led missions, managed IT across five countries, and juggled spreadsheets like a ninja. 
+         I speak Spanish fluently, English decently, and sarcasm fluently too. I love soccer, ping pong, and pretending I’m good at tennis. 
+         I’m studying software development at BYU–Pathway and hold an MBA, a BS in Systems Engineering, and a black belt in multitasking (okay, not officially).
+         and I’m all in!
+        </p>
+        <p>
+          This page implements a list of temples with links that open in a new tab, an <code>aside</code> element featuring an image with an overlaid title, and a profile image floated to the right so that the paragraph flows alongside it.
+        </p>
+      </section>
 
-  <footer>
-    <p>&copy; 2025 Armando Rebaza | Peru | WDD130</p>
+      <ul class="box temples">
+        <li>
+          <a
+            href="https://www.churchofjesuschrist.org/temples/details/philadelphia-pennsylvania-temple"
+            target="_blank" rel="noopener"
+          >Philadelphia Pennsylvania Temple</a>
+        </li>
+        <li>
+          <a
+            href="https://www.churchofjesuschrist.org/temples/details/paris-france-temple"
+            target="_blank" rel="noopener"
+          >Paris France Temple</a>
+        </li>
+        <li>
+          <a
+            href="https://www.churchofjesuschrist.org/temples/details/lima-peru-los-olivos-temple"
+            target="_blank" rel="noopener"
+          >Lima Perú (Los Olivos) Temple</a>
+        </li>
+      </ul>
+    </main>
+
+    <aside class="box">
+      <img
+        src="images/utah.jpg"
+        alt="Paisaje de Utah, Estados Unidos"
+        width="300"
+        height="150"
+      />
+      <h2 class="aside-label">Utah, USA</h2>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 Armando Rebaza • WDD130</p>
   </footer>
 </body>
 </html>

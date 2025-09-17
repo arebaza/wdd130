@@ -1,94 +1,151 @@
-/* General Reset */
-body {
-  font-family: Arial, sans-serif;
+/* (W03) Universal selector reset: margin, padding, box-sizing */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --muted: #6b7280;
+  --border: rgba(0, 0, 0, 0.1);
+  --accent: #1f6feb;
+}
+
+html, body { height: 100%; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
   line-height: 1.6;
 }
 
-/* Header */
-header {
-  background-color: #00457C;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+/* Header + Nav */
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem clamp(1rem, 3vw, 2rem);
+  display: grid;
+  gap: .75rem;
 }
 
-/* Navigation */
-nav {
-  background-color: #003366;
-  padding: 0.5rem;
+.site-header h1 {
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 800;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.site-nav {
   display: flex;
-  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav a {
-  color: white;
-  padding: 0.5rem;
-  display: block;
+.site-nav a {
   text-decoration: none;
+  color: var(--ink);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  transition: background .2s ease;
+}
+.site-nav a:hover { background: #eef2ff; }
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr min(28rem, 35vw);
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 2rem);
+  align-items: start;
 }
 
-/* Headings */
-h1 {
-  color: #00457C;
+main {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
-/* Images */
-img {
-  width: 150px;
+/* Intro section */
+.intro h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  margin-bottom: .5rem;
+}
+
+.intro p + p { margin-top: .75rem; }
+
+/* (W03) Float profile image to the right, paragraph flows next */
+main img.profile {
+  float: right;
+  margin: 0 0 1rem 1rem; /* espacio a la izquierda y abajo del texto */
+  border-radius: .5rem;
+  max-width: min(45%, 280px);
   height: auto;
   display: block;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Main */
-main {
-  max-width: 840px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
+/* (W03) UL of temples as a boxed section */
+.temples { list-style: disc inside; }
+.temples li + li { margin-top: .35rem; }
+.temples a { color: var(--accent); }
 
-/* Aside */
-aside {
-  width: 20rem;
-  margin: 1rem auto;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
+/* Aside with overlayed heading */
+aside.box {
+  /* (W03) Remove duplicate box-model props here (kept inside .box) */
+  width: 100%;
+  position: relative;           /* (W03) needed for absolute child */
   text-align: center;
+  overflow: hidden;
 }
 
-aside img {
-  width: 200px;
+aside.box img {
+  width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  display: block;
+  border-radius: .5rem;
 }
 
-/* Paragraphs */
-p {
-  padding: 0;
+/* (W03) Heading overlay positioned on top of the aside image */
+aside .aside-label {
+  position: absolute;
+  top: 1rem;                    /* Ajusta según tu imagen */
+  left: 1rem;                   /* Ajusta según tu imagen */
+  padding: .4rem .7rem;
+  background: rgba(17, 24, 39, .7);
+  color: #fff;
+  border-radius: .4rem;
+  font-size: clamp(.9rem, 2.2vw, 1rem);
+  font-weight: 700;
 }
 
 /* Footer */
-footer {
-  margin-top: 2rem;
-  border-top: 1px solid #ccc;
-  text-align: center;
+.site-footer {
+  padding: 1.25rem clamp(1rem, 3vw, 2rem);
+  color: var(--muted);
+}
+
+/* -----------------------------------------
+   (W03) Class Selectors
+------------------------------------------*/
+
+/* (W03) 'box' class with margin, border, padding, background-color, color */
+.box {
+  margin: 1rem;
+  border: 1px solid var(--border);
   padding: 1rem;
-  background-color: #f9f9f9;
+  background-color: #f1f5f9;
+  color: var(--ink);
+  border-radius: .75rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr; /* stack main and aside */
+  }
+  main img.profile {
+    max-width: 55%;
+  }
 }
