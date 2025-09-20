@@ -108,7 +108,7 @@ header nav a[aria-current="page"] {
   z-index: 2;
 }
 
-/* ✅ Specific article image float */
+/* ✅ Hero article image floated to the right */
 .hero article img {
   float: right;
   width: 125px;
@@ -145,10 +145,9 @@ footer p {
 }
 
 .socialmedia img {
-  /* ✅ fixed: correct property syntax */
   display: block;
   width: 28px;
-  height : 28px;
+  height: 28px;
 }
 
 /* Accessibility: visually hidden but screen-reader accessible */
