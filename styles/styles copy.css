@@ -1,0 +1,139 @@
+/* ===== Universal selector reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f7fb;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* ===== Header + Navigation ===== */
+.site-header {
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+}
+.site-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #2a2a2a;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Layout ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ===== Intro Section ===== */
+.intro {
+  background: linear-gradient(180deg, #e8f0ff 0%, #eef3fa 100%);
+  border-radius: .6rem;
+  padding: 1rem 1rem 1.25rem;
+  border: 1px solid rgba(0,0,0,.08);
+  overflow: auto; /* contain the floated image */
+}
+
+.intro__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #2b5cab;
+  font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+  margin: .25rem 0 .5rem;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
+
+/* Floated profile image with border + shadow */
+.profile {
+  float: right;
+  margin: 0 0 .75rem 1rem;
+  border-radius: .35rem;
+  background: #fff;
+  border: 6px solid #ffffff;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  width: 200px;
+  height: auto;
+}
+
+.intro p {
+  max-width: 58ch;
+  color: #333;
+}
+
+/* ===== Temple List ===== */
+.temples {
+  list-style: disc inside;
+}
+.temples li + li {
+  margin-top: 0.5rem;
+}
+.temples a {
+  color: #1f6feb;
+}
+
+/* ===== Class Selectors ===== */
+.box {
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 10%);
+  padding: 1rem;
+  background-color: #e7ebf0;
+  color: #000;
+  border-radius: 0.5rem;
+}
+
+/* ===== Aside Overlay ===== */
+aside {
+  position: relative;
+  text-align: center;
+}
+aside img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+.aside-label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.3rem;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 560px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .profile {
+    float: none;
+    display: block;
+    margin: 0 auto .75rem;
+    width: 60%;
+    max-width: 220px;
+  }
+  .intro p {
+    max-width: 65ch;
+  }
+}

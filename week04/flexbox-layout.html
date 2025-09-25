@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Title & Meta (match h1, concise, relevant) -->
+  <title>WDD 130: Web Fundamentals — Course Home</title>
+  <meta name="description" content="WDD 130: Web Fundamentals course home. Weekly links, layout enhancements, and standards checklist references for BYU–Idaho students." />
+  <meta name="author" content="Your Name" />
+
+  <!-- External CSS (single, proper order) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="brand">
+      <!-- BYU–I logo: use an optimized image (≤100 kB), correct alt -->
+      <img src="images/byui-logo.png" alt="BYU–Idaho logo" width="80" height="80" />
+      <!-- Single H1 that matches page purpose/title -->
+      <h1>WDD 130: Web Fundamentals</h1>
+    </div>
+
+    <!-- Flex navigation: even spacing, centered, accessible -->
+    <nav aria-label="Primary">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="#w1">W1</a></li>
+        <li><a href="#w2">W2</a></li>
+        <li><a href="#w3">W3</a></li>
+        <li><a href="#w4">W4</a></li>
+        <li><a href="#w5">W5</a></li>
+        <li><a href="#w6">W6</a></li>
+        <li><a href="#w7">W7</a></li>
+        <!-- Per instructions: LinkedIn & Facebook present -->
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Wrap main + aside in .grid (grid does the two-column layout) -->
+  <div class="grid">
+    <main id="main">
+      <section aria-labelledby="overview-title">
+        <h2 id="overview-title">Bookmark this page as a reference to use during the course.</h2>
+        <p class="muted">Follow the layout enhancements from Week 04 and the Web Development Standards Checklist below.</p>
+      </section>
+
+      <section aria-labelledby="standards-title">
+        <h2 id="standards-title">Web Development Standards Checklist</h2>
+
+        <h3>Overview</h3>
+        <p>These standards focus feedback, encourage discipline, and mirror realistic team baselines. They draw in part from David Dias’s Front-End Checklist and MDN references.</p>
+
+        <h3>Standards Checklist</h3>
+        <ul class="checklist">
+          <li>All folders/files use lowercase, no spaces, meaningful names.</li>
+          <li>Document type declaration: <code>&lt;!DOCTYPE html&gt;</code></li>
+          <li><code>&lt;html lang="en-US"&gt;</code></li>
+          <li>Head: charset, viewport, title, description, author, external CSS.</li>
+          <li>HTML is valid (W3C validator). Semantic elements are used. No broken links.</li>
+          <li>CSS is valid (W3C validator). Prefer classes; IDs, if used, are unique.</li>
+          <li>Images optimized; aspect ratios preserved; meaningful <code>alt</code> text.</li>
+          <li>Exactly one <code>&lt;h1&gt;</code> that aligns with <code>&lt;title&gt;</code>.</li>
+          <li>Headings follow logical order; no AA color contrast violations.</li>
+          <li>Accessibility warnings reviewed; page weight ≤ 500 kB (excl. maps).</li>
+        </ul>
+      </section>
+
+      <!-- Week anchors (placeholders for your content) -->
+      <section id="w1" aria-labelledby="w1-title">
+        <h2 id="w1-title">Week 1</h2>
+        <p>Content placeholder.</p>
+      </section>
+      <section id="w2" aria-labelledby="w2-title">
+        <h2 id="w2-title">Week 2</h2>
+        <p>Content placeholder.</p>
+      </section>
+      <section id="w3" aria-labelledby="w3-title">
+        <h2 id="w3-title">Week 3</h2>
+        <p>Content placeholder.</p>
+      </section>
+      <section id="w4" aria-labelledby="w4-title">
+        <h2 id="w4-title">W04 Code-along: Home Page Layout Enhancements</h2>
+        <p>Refactor header/footer max-width, add Flex nav, block anchors, bottom border on <code>h1</code>, wrap <code>main</code>+<code>aside</code> in <code>.grid</code>, and use Grid to place aside (left) and main (right).</p>
+      </section>
+      <section id="w5" aria-labelledby="w5-title">
+        <h2 id="w5-title">Week 5</h2>
+        <p>Content placeholder.</p>
+      </section>
+      <section id="w6" aria-labelledby="w6-title">
+        <h2 id="w6-title">Week 6</h2>
+        <p>Content placeholder.</p>
+      </section>
+      <section id="w7" aria-labelledby="w7-title">
+        <h2 id="w7-title">Week 7</h2>
+        <p>Content placeholder.</p>
+      </section>
+    </main>
+
+    <aside aria-labelledby="aside-title">
+      <h2 id="aside-title">Quick Links</h2>
+      <ul>
+        <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas (I-Learn)</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+      </ul>
+
+      <h2>Testing Tips</h2>
+      <ul>
+        <li>DevTools → CSS Overview: check color contrast (AA).</li>
+        <li>DevTools → Network (hard refresh): ensure ≤ 500 kB transferred.</li>
+        <li>Validate HTML/CSS and run a link checker.</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 • Armando Rebaza • WDD 130</p>
+  </footer>
+</body>
+</html>
