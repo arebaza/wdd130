@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ✅ Title updated to include "About Us" and company name -->
-  <title>About Us — Extreme Water Rafting Co.</title>
-
-  <!-- ✅ Meta description improved for clarity -->
- <meta name="description" content="Discover White Water Rafting Co.— where adventure meets nature. Learn about our mission, history, and passion for unforgettable river experiences." />
-  <meta name="author" content="Armando Rebaza" />
-
-  <link rel="stylesheet" href="styles/rafting.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | White Water Rafting Co.</title>
+  <meta name="description" content="Learn more about White Water Rafting Co. — our history, purpose, and the exciting adventures that await you on the river.">
+  <meta name="author" content="Armando Rebaza">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
   <header>
-    <!-- ✅ Removed height="auto" (invalid) and left width only -->
-    <a class="logo" href="index.html">
-      <img src="images/logo.png" alt="Extreme Water Rafting Company Logo" width="150">
-    </a>
-
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" aria-current="page">About Us</a></li>
-        <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <!-- ✅ Header uses grid layout -->
+    <img src="images/logo.png" alt="White Water Rafting Co. Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <!-- ✅ Hero overlay setup -->
+    <!-- ✅ Hero section with image + overlay -->
     <div class="hero">
-      <img src="images/hero.jpg" alt="Group white-water rafting through river rapids">
-      <h1>Extreme Water Rafting Co.</h1>
-
-      <!-- ✅ Added heading inside article to resolve "article lacks heading" warning -->
+      <img src="images/hero.jpg" alt="Exciting rafting adventure on a wild river">
+      <h1>White Water Rafting Co.</h1>
       <article>
         <h2 class="sr-only">Our Mission</h2>
-        <img src="images/happy-client.jpg" alt="Happy guest smiling with life jacket">
+        <img src="images/happy-client.jpg" alt="Happy client enjoying rafting trip">
         <p>
-          Our purpose is simple: create unforgettable river experiences safely and responsibly.
-          From first-timers to seasoned paddlers, we champion teamwork, stewardship, and pure fun.
-          Join us on the water—where confidence grows and memories last.
+          Our mission is to provide thrilling yet safe rafting experiences for families, friends,
+          and adventurers. We believe the river teaches teamwork, builds confidence, and creates
+          memories that last a lifetime.
         </p>
       </article>
     </div>
 
-    <section>
+    <!-- ✅ History section styled with two-column layout -->
+    <section class="history">
       <h2>History</h2>
       <p>
-        Founded by river enthusiasts with a single raft and a big dream, we’ve navigated countless
-        bends since our first season. Today, our guides blend local knowledge and safety-first
-        training to deliver adventures that keep guests coming back year after year.
+        Founded with one raft and a dream, White Water Rafting Co. has been guiding adventurers
+        down the river for over a decade. We pride ourselves on professional guides, top-notch
+        safety practices, and a deep love of nature.
       </p>
     </section>
 
-    <section>
+    <!-- ✅ Adventure Awaits section with figures -->
+    <section class="adventures">
       <h2>Adventure Awaits You!</h2>
+      <div class="adventure-gallery">
+        <figure>
+          <img src="images/adventure1.jpg" alt="Los Dientes del Diablo rapids">
+          <figcaption>Los Dientes del Diablo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure2.jpg" alt="Big Mallard rapids">
+          <figcaption>Big Mallard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure3.jpg" alt="Half Day Adventure group">
+          <figcaption>Half Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure4.jpg" alt="Sunset rafting trip">
+          <figcaption>Sunset Run</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure5.jpg" alt="Excited group on challenging rapids">
+          <figcaption>White Knuckle Rapids</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Extreme Water Rafting Co. • Armando Rebaza</p>
-    <nav class="socialmedia" aria-label="Social media">
-      <a href="https://facebook.com">
-        <img src="images/facebook.svg" alt="Facebook icon">
+    <p>&copy; 2025 White Water Rafting Co. | Armando Rebaza</p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="images/facebook.svg" alt="Facebook">
       </a>
-      <a href="https://linkedin.com">
-        <img src="images/linkedin.svg" alt="LinkedIn icon">
+      <a href="https://linkedin.com" target="_blank" rel="noopener">
+        <img src="images/linkedin.svg" alt="LinkedIn">
       </a>
-      <a href="https://instagram.com">
-        <img src="images/instagram.svg" alt="Instagram icon">
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img src="images/instagram.svg" alt="Instagram">
       </a>
     </nav>
   </footer>
