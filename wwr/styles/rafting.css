@@ -182,5 +182,5 @@ footer {
    =========== */
 .sr-only {
   position: absolute;
-  left: -9999px;
+  left:-9999px;
 }
