@@ -1,0 +1,186 @@
+/* ===========
+   CSS Variables
+   =========== */
+:root {
+  --primary-color: #0f766e;
+  --secondary-color: #f59e0b;
+  --accent1-color: #334155;
+  --accent2-color: #ffffff;
+  --heading-font: Georgia, "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* ===========
+   Reset
+   =========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========
+   Base
+   =========== */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===========
+   Header (Grid Layout)
+   =========== */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+.logo {
+  height: 80px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+nav a {
+  display: block;
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* ===========
+   Hero Section
+   =========== */
+.hero {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(51, 65, 85, 0.8);
+  color: white;
+  padding: 1rem;
+  font-family: var(--heading-font);
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 1rem;
+  border-radius: 8px;
+}
+
+/* ===========
+   History Section
+   =========== */
+.history {
+  background: #fff;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-left: 5px solid var(--primary-color);
+}
+
+/* ===========
+   Adventure Section
+   =========== */
+.adventures {
+  margin: 2rem 0;
+}
+
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.adventure-gallery figure {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  display: block;
+}
+
+.adventure-gallery figcaption {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+/* ===========
+   Footer
+   =========== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
+
+.socialmedia a {
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.socialmedia img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* ===========
+   Utility
+   =========== */
+.sr-only {
+  position: absolute;
+  left:-9999px;
+}
