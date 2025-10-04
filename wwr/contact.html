@@ -20,12 +20,13 @@
       </nav>
     </div>
   </header>
+
   <main>
     <div class="container">
-      
-       
+
+      <!-- Company Info -->
       <section class="company-info">
-        <h1>White Water Rafting Company</h1>
+        <h1>Contact White Water Rafting Co.</h1>
         <p>
           123 Main River Street<br>
           Kolob, California<br>
@@ -34,6 +35,7 @@
         </p>
       </section>
 
+      <!-- Map + Form Section -->
       <section class="contact-container">
         <div class="map">
           <iframe
@@ -44,40 +46,60 @@
           </iframe>
         </div>
 
-        <form class="contact-form">
+        <!-- Contact Form -->
+        <form class="contact-form" action="#" method="post">
+          <!-- Name -->
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Your name" required>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
           </div>
 
+          <!-- Email -->
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Your email" required>
           </div>
 
+          <!-- Message Purpose -->
           <fieldset class="form-group">
             <legend>Message Purpose</legend>
-            <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
-            <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-            <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+
+            <label for="purpose-general">
+              <input type="radio" id="purpose-general" name="purpose" value="general" required>
+              General Inquiry
+            </label>
+
+            <label for="purpose-reservation">
+              <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+              Reservation Question
+            </label>
+
+            <label for="purpose-suggestion">
+              <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
+              Website Suggestion
+            </label>
           </fieldset>
 
+          <!-- Message -->
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4" placeholder="Type here" required></textarea>
           </div>
 
+          <!-- Newsletter Checkbox -->
           <div class="form-group checkbox">
-            <label>
-              <input type="checkbox" name="subscribe">
+            <label for="subscribe">
+              <input type="checkbox" id="subscribe" name="subscribe">
               Please subscribe me to the monthly newsletter
             </label>
           </div>
 
+          <!-- Submit -->
           <button type="submit" class="contact-btn">Get in Touch!</button>
         </form>
       </section>
 
+      <!-- Employee Profiles -->
       <section class="employee-profiles">
         <h2>We Are Here to Serve You</h2>
         <div class="profiles">
